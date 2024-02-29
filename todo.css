@@ -75,6 +75,7 @@ body.dark-mode #popup-container h2{
 body.dark-mode #popup-container form input{
     background-color: #252525;
     border: 1px solid #F7F7F7;
+    color: #F7F7F7;
 }
 
 body.dark-mode #popup-container form input::placeholder{
@@ -429,7 +430,7 @@ hr{
     }
 
     #container #btn-container #btn{
-        left:135px;
+        left:123px;
     }
 
     #container #btn img{
@@ -489,6 +490,10 @@ hr{
         margin-left: 15px;
     }
 
+    #popup-container form input::placeholder{
+        font-size: 12px;
+    }
+
     #popup-container .btn{
         display: inline-flex;
         margin-top: 10px;
@@ -509,6 +514,6 @@ hr{
 
     #button-container{
         left: 285px;
-        top: 650px;
+        top: 550px;
     }
 }
