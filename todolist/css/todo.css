@@ -430,7 +430,7 @@ hr{
     }
 
     #taskInput {
-        width:490px; 
+        width:590px; 
         height: 40px;
         margin: 10px;
         padding: 5px 8px;
@@ -479,9 +479,9 @@ hr{
     }
 
     ul li span{
-        right: -95px;
-        width:12px;
-        height: 12px;
+        right: -35px;
+        width:10px;
+        height: 10px;
     }
 
     hr{
@@ -542,7 +542,7 @@ hr{
     }
 
     #taskInput {
-        width: 70%; 
+        width: 78%; 
         margin: 10px 10px;
     }
 
@@ -591,13 +591,13 @@ hr{
     }
 
     ul li span{
-        right: -95px;
-        width:12px;
-        height: 12px;
+        right: -65px;
+        width:10px;
+        height: 10px;
     }
 
     hr{
-        width: 350px;
+        width: 330px;
         margin-left: -20px;
     }
 
