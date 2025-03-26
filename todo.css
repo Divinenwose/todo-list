@@ -1,0 +1,1299 @@
+<<<<<<< HEAD:todolist/css/todo.css
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    position: relative;
+    transition: background-color 0.3s ease;
+    background-color: var(--white, #F7F7F7);
+}
+
+body.dark-mode{
+    background-color:#252525;
+}
+
+body.dark-mode #container h1{
+    color:#F7F7F7;
+}
+
+body.dark-mode #taskInput{
+    border: 1px solid #fff;
+    background-color: #252525;
+}
+
+body.dark-mode #taskInput::placeholder{
+    color:#666;
+}
+
+body.dark-mode #container #btn img{
+   color: white;
+}
+
+body.dark-mode .colour-scheme button{
+    background-color: #252525
+}
+
+body.dark-mode #dark-btn{
+    display: none;
+}
+
+body:not(.dark-mode) #light-btn{
+    display: none;
+}
+
+body.dark-mode .empty-light{
+    display: none;
+}
+
+body:not(.dark-mode) .empty-dark{
+    display: none;
+}
+
+body.dark-mode #add-btn{
+    background-color:#252525;
+}
+
+body.dark-mode ul li{
+    color:#F7F7F7;
+}
+
+body.dark-mode #popup-container{
+    background-color: #252525;
+    border: 1px solid #F7F7F7;
+}
+
+body.dark-mode #popup-container h2{
+    color: #F7F7F7;
+}
+
+body.dark-mode #popup-container form input{
+    background-color: #252525;
+    border: 1px solid #F7F7F7;
+    color: #F7F7F7;
+}
+
+body.dark-mode #popup-container form input::placeholder{
+    color: #666;
+}
+
+body.dark-mode #popup-container .btn .btn-one{
+    background-color: #252525;
+}
+
+body.dark-mode .detective p{
+    color: #F7F7F7;
+}
+
+body.dark-mode ul li.checked{
+    color: #666;
+    text-decoration:line-through;
+}
+
+#container h1{
+    color: var(--black, #252525);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 40px;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#second-layer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+#form-wrapper{
+    display: flex;
+    align-items: center;
+   
+}
+
+#taskInput{
+    width: 595px;
+    height:39px;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    height: 38px;
+    padding: 8px 16px;
+    outline:none;
+    border-radius: 5px;
+    position: relative;
+    color: #C3C1E5;
+    border: 1px solid var(--purple, #6C63FF);
+    background-color: var(--white, #F7F7F7);
+}
+
+#taskInput::placeholder{
+    color: #C3C1E5;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+
+#container #search-btn-container #btn{
+    background:transparent;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right:510px;
+    top:68px;
+}
+
+#container #btn img{
+    width: 21px;
+    height: 21px;
+}
+
+.detective{
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.detective p{
+    color: var(--black, #252525);
+    font-family: "Kanit";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.select-wrapper{
+    display: flex;
+    justify-items: center;
+    gap:10px;
+}
+
+#select-box{
+    position: relative;
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: var(--purple, #6C63FF);
+    margin-left: 16px;
+    color: var(--white, #F7F7F7);
+    font-family: "Kanit";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    width:120px;
+    height: 39px;
+    text-align: center;
+}
+
+#select-box option{
+    text-transform:none;
+    background-color: #fff;
+    color: var(--purple, #6C63FF);
+    font-family: "Kanit";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.colour-scheme button{
+    border: none;  
+    background-color: var(--white, #F7F7F7);
+}
+
+.colour-scheme img{
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+}
+
+
+ul li{
+    color: var(--black, #252525);
+    font-family: "Kanit";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    text-transform: uppercase;
+    width: 420px;
+    user-select: none;
+    cursor: pointer;
+    list-style: none;
+    margin-top: 33px;
+    position: relative;
+    margin-left: 390px;
+}
+
+ul li::before{
+    width: 30px;
+    height: 30px;
+    content: '';
+    position: absolute;
+    background: url(../icon/Rectangle\ 17\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    left:-50px;
+    top:-5px;
+}
+
+ul li.checked{
+    color: rgba(37, 37, 37, 0.50);
+    text-decoration:line-through;
+}
+
+ul li.checked::before{
+    content:"\2714";
+    color: #fff;
+    padding-top:4px;
+    padding-left: 6px;
+    width: 26px;
+    height: 26px;
+    background: url(../icon/Rectangle\ 17.png);
+    background-size: cover;
+    background-position: center;
+}
+
+ul li span{
+    margin-left: 20px;
+    position: absolute;
+    right: -50px;
+    width: 18px;
+    height: 18px;
+    color:#CDCDCD;
+    font-size: 16px;
+}
+
+ul li span:hover{
+    color:#E50000;
+}
+
+hr{
+    opacity: 0.5;
+    background-color: #6C63FF;
+    width: 520px;
+    height: 1px;
+    margin-top: 20px;
+    margin-left: 340px;
+    border: none;
+}
+
+#overlay{
+    background: rgba(37, 37, 37, 0.70);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    display: none;
+}
+
+#popup-container{
+    position: absolute;
+    top:58px;
+    right:420px;
+    width: 500px;
+    height: 300px;
+    border-radius: 16px;
+    background: var(--white, #F7F7F7);
+    margin-left: 450px;
+    margin-top: 30px;
+    display: none;
+    z-index: 2;
+}
+
+#popup-container h2{
+    color: var(--black, #252525);
+    font-family: "Kanit";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+    padding-top: 18px;
+    text-align: center;
+}
+
+#popup-container form input{
+    display: flex;
+    width: 440px;
+    height: 38px;
+    padding: 8px 16px;
+    align-items: center;
+    font-size: 16px;
+    gap: 436px;
+    border-radius: 5px;
+    border: 1px solid var(--purple, #6C63FF);
+    margin-left: 30px;
+    margin-top: 25px;
+    outline: none;
+}
+
+#popup-container form input::placeholder{
+    color: #C3C1E5;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+
+
+#popup-container .btn .btn-one{
+    margin-left: 30px;
+    display: inline-flex;
+    padding: 10px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--purple, #6C63FF);
+    color: var(--purple, #6C63FF);
+    font-family: "Kanit";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 138px;
+}
+
+#popup-container .btn .btn-two{
+    display: inline-flex;
+    padding: 10px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 233px;
+    border-radius: 5px;
+    background: var(--purple, #6C63FF);
+    color: var(--white, #F7F7F7);
+    font-family: "Kanit";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    margin-top: 138px;
+}
+
+#button-container{
+    position:absolute;
+    bottom:55px;
+    top:450px;
+    left:990px;
+    width: 50px;
+    height: 50px;
+}
+
+#add-btn{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-color: var(--white, #F7F7F7);
+}
+
+@media only screen and  (max-width: 375px){
+    #container h1 {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    #second-layer{
+        margin-top: 10px;
+    }
+
+    #taskInput {
+        width:590px; 
+        height: 40px;
+        margin: 10px;
+        padding: 5px 8px;
+    }
+
+    #taskInput::placeholder{
+        font-size: 12px;
+    }
+
+    #container #search-btn-container #btn{
+        left:-89px;
+        top:65px;
+    }
+
+    #container #btn img{
+        width:13px;
+        height: 13px;
+    }
+
+    .select-wrapper{
+        gap:5px;
+    }
+
+    #select-box{
+        width: 113px;
+    }
+
+    #select-box option{
+        font-size: 10px;
+        margin-left: 6px;
+    }
+
+    ul li {
+        width: 210px; 
+        margin-left: 18px; 
+        font-size: 15px;
+    }
+
+    ul li::before{
+        left:-47px;
+    }
+
+    ul li.checked::before{
+        padding-left: 10px;
+        padding-top:8px;
+    }
+
+    ul li span{
+        right: -35px;
+        width:10px;
+        height: 10px;
+    }
+
+    hr{
+        width: 350px;
+        margin-left: -20px;
+    }
+
+    #popup-container {
+        width: 290px; 
+        margin-left: 250px; 
+        top: 60px; 
+        right:45px;
+    }
+
+    #popup-container h2{
+        font-size: 20px;
+    }
+
+    #popup-container form input{
+        width:90%;
+        margin-left: 15px;
+    }
+
+    #popup-container form input::placeholder{
+        font-size: 12px;
+    }
+
+    #popup-container .btn{
+        display: inline-flex;
+        margin-top: 10px;
+    }
+
+    #popup-container .btn .btn-one{
+        margin-left: 15px;
+        font-size: 12px; 
+    }
+
+    #popup-container .btn .btn-two{
+        margin-left: 65px;
+        font-size: 12px;
+    }
+
+    body #button-container{
+        left: 299px;
+        top: 490px;
+    }
+}
+
+
+@media only screen and (max-width:430px){
+    #container h1 {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    #second-layer{
+        margin-top: 10px;
+    }
+
+    #taskInput {
+        width: 78%; 
+        margin: 10px 10px;
+    }
+
+    #taskInput::placeholder{
+        font-size: 14px;
+    }
+
+    #container #search-btn-container #btn{
+        left: 140px ;
+        top:60px;
+    }
+
+    #container #btn img{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+        
+    }
+
+    .select-wrapper{
+        gap:4px;
+    }
+
+    #select-box{
+        width: 108px;
+        margin-left: -12px;
+    }
+
+    #select-box option{
+        font-size: 12px;
+    }
+
+    ul li {
+        width: 210px; 
+        margin-left: 25px; 
+        font-size: 15px;
+    }
+
+    ul li::before{
+        left:-37px;
+    }
+
+    ul li.checked::before{
+        padding-left: 7px;
+        padding-top:7px;
+    }
+
+    ul li span{
+        right: -65px;
+        width:10px;
+        height: 10px;
+    }
+
+    hr{
+        width: 330px;
+        margin-left: -20px;
+    }
+
+    #popup-container {
+        width: 290px; 
+        margin-left: 250px; 
+        top: 60px; 
+        right:45px;
+    }
+
+    #popup-container h2{
+        font-size: 20px;
+    }
+
+    #popup-container form input{
+        width:90%;
+        margin-left: 15px;
+    }
+
+    #popup-container form input::placeholder{
+        font-size: 12px;
+    }
+
+    #popup-container .btn{
+        display: inline-flex;
+        margin-top: 10px;
+    }
+
+    #popup-container .btn .btn-one{
+        margin-left: 15px;
+        font-size: 12px; 
+    }
+
+    #popup-container .btn .btn-two{
+        margin-left: 65px;
+        font-size: 12px;
+    }
+
+    body #button-container{
+        left: 300px;
+        top: 490px;
+    }
+
+}
+
+=======
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    position: relative;
+    transition: background-color 0.3s ease;
+    background-color: var(--white, #F7F7F7);
+    overflow:hidden;
+}
+
+body.dark-mode{
+    background-color:#252525;
+}
+
+body.dark-mode #container h1{
+    color:#F7F7F7;
+}
+
+body.dark-mode #taskInput{
+    border: 1px solid #fff;
+    background-color: #252525;
+}
+
+body.dark-mode #taskInput::placeholder{
+    color:#666;
+}
+
+body.dark-mode #container #btn img{
+   color: white;
+}
+
+body.dark-mode .colour-scheme button{
+    background-color: #252525
+}
+
+body.dark-mode #dark-btn{
+    display: none;
+}
+
+body:not(.dark-mode) #light-btn{
+    display: none;
+}
+
+body.dark-mode .empty-light{
+    display: none;
+}
+
+body:not(.dark-mode) .empty-dark{
+    display: none;
+}
+
+body.dark-mode #add-btn{
+    background-color:#252525;
+}
+
+body.dark-mode ul li{
+    color:#F7F7F7;
+}
+
+body.dark-mode #popup-container{
+    background-color: #252525;
+    border: 1px solid #F7F7F7;
+}
+
+body.dark-mode #popup-container h2{
+    color: #F7F7F7;
+}
+
+body.dark-mode #popup-container form input{
+    background-color: #252525;
+    border: 1px solid #F7F7F7;
+    color: #F7F7F7;
+}
+
+body.dark-mode #popup-container form input::placeholder{
+    color: #666;
+}
+
+body.dark-mode #popup-container .btn .btn-one{
+    background-color: #252525;
+}
+
+body.dark-mode .detective p{
+    color: #F7F7F7;
+}
+
+body.dark-mode ul li.checked{
+    color: #666;
+    text-decoration:line-through;
+}
+
+#container h1{
+    color: var(--black, #252525);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 40px;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#second-layer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+#form-wrapper{
+    display: flex;
+    align-items: center;
+   
+}
+
+#taskInput{
+    width: 595px;
+    height:39px;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    height: 38px;
+    padding: 8px 16px;
+    outline:none;
+    border-radius: 5px;
+    position: relative;
+    color: #C3C1E5;
+    border: 1px solid var(--purple, #6C63FF);
+    background-color: var(--white, #F7F7F7);
+}
+
+#taskInput::placeholder{
+    color: #C3C1E5;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+
+#container #search-btn-container #btn{
+    background:transparent;
+    outline:none;
+    border:none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right:510px;
+    top:68px;
+}
+
+#container #btn img{
+    width: 21px;
+    height: 21px;
+}
+
+.detective{
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.detective p{
+    color: var(--black, #252525);
+    font-family: "Kanit";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.select-wrapper{
+    display: flex;
+    justify-items: center;
+    gap:10px;
+}
+
+#select-box{
+    position: relative;
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: var(--purple, #6C63FF);
+    margin-left: 16px;
+    color: var(--white, #F7F7F7);
+    font-family: "Kanit";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    width:120px;
+    height: 39px;
+    text-align: center;
+}
+
+#select-box option{
+    text-transform:none;
+    background-color: #fff;
+    color: var(--purple, #6C63FF);
+    font-family: "Kanit";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.colour-scheme button{
+    border: none;  
+    background-color: var(--white, #F7F7F7);
+}
+
+.colour-scheme img{
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+}
+
+
+ul li{
+    color: var(--black, #252525);
+    font-family: "Kanit";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    text-transform: uppercase;
+    width: 420px;
+    user-select: none;
+    cursor: pointer;
+    list-style: none;
+    margin-top: 33px;
+    position: relative;
+    margin-left: 390px;
+}
+
+ul li::before{
+    width: 30px;
+    height: 30px;
+    content: '';
+    position: absolute;
+    background: url(../icon/Rectangle\ 17\ \(1\).png);
+    background-size: cover;
+    background-position: center;
+    left:-50px;
+    top:-5px;
+}
+
+ul li.checked{
+    color: rgba(37, 37, 37, 0.50);
+    text-decoration:line-through;
+}
+
+ul li.checked::before{
+    content:"\2714";
+    color: #fff;
+    padding-top:4px;
+    padding-left: 6px;
+    width: 26px;
+    height: 26px;
+    background: url(../icon/Rectangle\ 17.png);
+    background-size: cover;
+    background-position: center;
+}
+
+ul li span{
+    margin-left: 20px;
+    position: absolute;
+    right: -50px;
+    width: 18px;
+    height: 18px;
+    color:#CDCDCD;
+    font-size: 16px;
+}
+
+ul li span:hover{
+    color:#E50000;
+}
+
+hr{
+    opacity: 0.5;
+    background-color: #6C63FF;
+    width: 520px;
+    height: 1px;
+    margin-top: 20px;
+    margin-left: 340px;
+    border: none;
+}
+
+#overlay{
+    background: rgba(37, 37, 37, 0.70);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    display: none;
+}
+
+#popup-container{
+    position: absolute;
+    top:58px;
+    right:420px;
+    width: 500px;
+    height: 300px;
+    border-radius: 16px;
+    background: var(--white, #F7F7F7);
+    margin-left: 450px;
+    margin-top: 30px;
+    display: none;
+    z-index: 2;
+}
+
+#popup-container h2{
+    color: var(--black, #252525);
+    font-family: "Kanit";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+    padding-top: 18px;
+    text-align: center;
+}
+
+#popup-container form input{
+    display: flex;
+    width: 440px;
+    height: 38px;
+    padding: 8px 16px;
+    align-items: center;
+    font-size: 16px;
+    gap: 436px;
+    border-radius: 5px;
+    border: 1px solid var(--purple, #6C63FF);
+    margin-left: 30px;
+    margin-top: 25px;
+    outline: none;
+}
+
+#popup-container form input::placeholder{
+    color: #C3C1E5;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+
+
+#popup-container .btn .btn-one{
+    margin-left: 30px;
+    display: inline-flex;
+    padding: 10px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--purple, #6C63FF);
+    color: var(--purple, #6C63FF);
+    font-family: "Kanit";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 138px;
+}
+
+#popup-container .btn .btn-two{
+    display: inline-flex;
+    padding: 10px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 233px;
+    border-radius: 5px;
+    background: var(--purple, #6C63FF);
+    color: var(--white, #F7F7F7);
+    font-family: "Kanit";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    margin-top: 138px;
+}
+
+#button-container{
+    position:absolute;
+    bottom:55px;
+    top:450px;
+    left:990px;
+    width: 50px;
+    height: 50px;
+}
+
+#add-btn{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-color: var(--white, #F7F7F7);
+}
+
+@media only screen and  (max-width: 375px){
+    body{
+        overflow:hidden;
+    }
+
+    #container h1 {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    #second-layer{
+        margin-top: 10px;
+    }
+
+    #taskInput {
+        width:590px; 
+        height: 40px;
+        margin: 10px;
+        padding: 5px 8px;
+    }
+
+    #taskInput::placeholder{
+        font-size: 12px;
+    }
+
+    #container #search-btn-container #btn{
+        left:-89px;
+        top:65px;
+    }
+
+    #container #btn img{
+        width:13px;
+        height: 13px;
+    }
+
+    .select-wrapper{
+        gap:5px;
+    }
+
+    #select-box{
+        width: 120px;
+        font-size: 12px;
+    }
+
+    #select-box option{
+        margin-left: 6px;
+    }
+
+    ul li {
+        width: 210px; 
+        margin-left: 18px; 
+        font-size: 15px;
+    }
+
+    ul li::before{
+        left:-47px;
+    }
+
+    ul li.checked::before{
+        padding-left: 8px;
+        width: 25px;
+    }
+
+    ul li span{
+        right: -35px;
+        width:10px;
+        height: 10px;
+    }
+
+    hr{
+        width: 350px;
+        margin-left: -20px;
+    }
+
+    #popup-container {
+        width: 290px; 
+        margin-left: 250px; 
+        top: 60px; 
+        right:45px;
+    }
+
+    #popup-container h2{
+        font-size: 20px;
+    }
+
+    #popup-container form input{
+        width:90%;
+        margin-left: 15px;
+    }
+
+    #popup-container form input::placeholder{
+        font-size: 12px;
+    }
+
+    #popup-container .btn{
+        display: inline-flex;
+        margin-top: 10px;
+    }
+
+    #popup-container .btn .btn-one{
+        margin-left: 15px;
+        font-size: 12px; 
+    }
+
+    #popup-container .btn .btn-two{
+        margin-left: 65px;
+        font-size: 12px;
+    }
+
+    body #button-container{
+        left: 299px;
+        top: 490px;
+    }
+}
+
+
+@media only screen and (max-width:430px){
+    body{
+        overflow: hidden;
+    }
+    
+    #container h1 {
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    #second-layer{
+        margin-top: 10px;
+    }
+
+    #taskInput {
+        width: 78%; 
+        margin: 10px 10px;
+    }
+
+    #taskInput::placeholder{
+        font-size: 14px;
+    }
+
+    #container #search-btn-container #btn{
+        left: 140px ;
+        top:60px;
+    }
+
+    #container #btn img{
+        width: 20px;
+        height: 20px;
+        padding-left: 10px;
+        
+    }
+
+    .select-wrapper{
+        gap:4px;
+    }
+
+    #select-box{
+        width: 108px;
+        margin-left: -12px;
+        font-size: 12px;
+    }
+
+    ul li {
+        width: 210px; 
+        margin-left: 25px; 
+        font-size: 15px;
+    }
+
+    ul li::before{
+        left:-37px;
+    }
+
+    ul li.checked::before{
+        padding-left: 7px;
+        padding-top:7px;
+    }
+
+    ul li span{
+        right: -65px;
+        width:10px;
+        height: 10px;
+    }
+
+    hr{
+        width: 330px;
+        margin-left: -20px;
+    }
+
+    #popup-container {
+        width: 290px; 
+        margin-left: 250px; 
+        top: 60px; 
+        right:45px;
+    }
+
+    #popup-container h2{
+        font-size: 20px;
+    }
+
+    #popup-container form input{
+        width:90%;
+        margin-left: 15px;
+    }
+
+    #popup-container form input::placeholder{
+        font-size: 12px;
+    }
+
+    #popup-container .btn{
+        display: inline-flex;
+        margin-top: 10px;
+    }
+
+    #popup-container .btn .btn-one{
+        margin-left: 15px;
+        font-size: 12px; 
+    }
+
+    #popup-container .btn .btn-two{
+        margin-left: 65px;
+        font-size: 12px;
+    }
+
+    body #button-container{
+        left: 300px;
+        top: 490px;
+    }
+
+}
+
+>>>>>>> a0d3473 (updated one):todo.css

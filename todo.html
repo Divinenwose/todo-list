@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="./todo.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Kanit:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <h1>TODO LIST</h1>
+        <div id="second-layer">
+            <div id="input-wrapper">
+                <form id="form-wrapper">
+                    <input type="text" id="taskInput" placeholder="Search note..." />
+                    <div id="search-btn-container">
+                        <button id="btn" type="submit"><img src="./icon/glass.svg" /></button>
+                    </div>
+                </form>
+            </div>
+           <div class="select-wrapper">
+                <div id="select-container">
+                    <select id="select-box">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="incomplete">Incompleted</option>
+                    </select>
+                </div>
+                <div class="colour-scheme">
+                    <button  onclick="changeColor()">
+                        <img id="dark-btn" src="./icon/Color Scheme (1).svg" />
+                        <img src="./icon/light-mode.svg" id="light-btn" />
+                    </button>
+                </div>
+           </div>
+        </div>
+        <div id="checklist-container">    
+            <ul id="list-container">
+                
+            </ul>
+        </div>
+        <div class="detective">
+            <img class="empty-light" src="./icon/Detective-check-footprint 1.svg" />
+            <img src=".icon/detective-dark.svg" class="empty-dark" />
+            <p>Empty...</p>
+        </div>
+    </div>
+    <div id="overlay">
+        <div id="popup-container">
+            <h2>New Note</h2>
+            <form>
+                <input id="input-note" type="text" placeholder="Input your note..." />
+                <div class="btn">
+                    <button class="btn-one" type="cancel">Cancel</button>
+                    <button type="apply" onclick="addNewNote()" class="btn-two">Apply</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="button-container">
+        <button id="add-btn" onclick="addPopUp()"><img src="./icon/Add button.svg" /></button>
+    </div>
+
+
+
+    <script src="./todo.js"></script>
+</body>
+</html>
